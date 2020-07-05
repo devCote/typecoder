@@ -5,6 +5,10 @@ document.getElementById('form').onsubmit = function () {
     .join('*');
 
   document.getElementById('worktext').value = '';
+  var elem = document.querySelector('.encrypted-text');
+  if (elem) {
+    elem.parentNode.removeChild(elem);
+  }
 
   let finalRes = '';
 
@@ -185,6 +189,7 @@ document.getElementById('form').onsubmit = function () {
   }
 
   var newDiv = document.createElement('div');
+  newDiv.className = 'encrypted-text';
   newDiv.innerHTML = `<p>${finalRes}</p>`;
   document.body.appendChild(newDiv);
 
