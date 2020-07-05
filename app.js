@@ -1,3 +1,12 @@
+document.addEventListener('keydown', function (event) {
+  if (
+    (event.metaKey && event.keyCode === 13) ||
+    (event.ctrlKey && event.keyCode === 13)
+  ) {
+    document.getElementById('form').onsubmit();
+  }
+});
+
 document.getElementById('form').onsubmit = function () {
   const textData = document
     .getElementById('worktext')
