@@ -4,6 +4,8 @@ document.getElementById('form').onsubmit = function () {
     .value.split('\n')
     .join('*');
 
+  document.getElementById('worktext').value = '';
+
   let finalRes = '';
 
   for (var i = 0; i < textData.length; i++) {
